@@ -1,7 +1,7 @@
 require "spec_helper"
 require "serverspec"
 
-config  = "/etc/installurl"
+config = "/etc/installurl"
 url = "https://fastly.cdn.openbsd.org/pub/OpenBSD"
 
 describe file(config) do
