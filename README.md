@@ -10,8 +10,8 @@ None
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `installurl_path` | | `/etc/installurl` |
-| `installurl_url` | | `https://ftp.openbsd.org/pub/OpenBSD` |
+| `installurl_path` | path to `installurl(5)` | `/etc/installurl` |
+| `installurl_url` | the `installurl` | `https://ftp.openbsd.org/pub/OpenBSD` |
 
 # Dependencies
 
