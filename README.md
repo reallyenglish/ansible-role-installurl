@@ -1,6 +1,6 @@
 # ansible-role-installurl
 
-A brief description of the role goes here.
+Manages `installurl(5)` on OpenBSD
 
 # Requirements
 
@@ -8,9 +8,10 @@ None
 
 # Role Variables
 
-| variable | description | default |
+| Variable | Description | Default |
 |----------|-------------|---------|
-
+| `installurl_path` | | `/etc/installurl` |
+| `installurl_url` | | `https://ftp.openbsd.org/pub/OpenBSD` |
 
 # Dependencies
 
@@ -19,6 +20,11 @@ None
 # Example Playbook
 
 ```yaml
+- hosts: localhost
+  roles:
+    - ansible-role-installurl
+  vars:
+    installurl_url: https://fastly.cdn.openbsd.org/pub/OpenBSD
 ```
 
 # License
