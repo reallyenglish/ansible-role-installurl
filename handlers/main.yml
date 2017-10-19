@@ -1,0 +1,6 @@
+---
+
+- name: Restart installurl
+  service:
+    name: installurl
+    state: restarted

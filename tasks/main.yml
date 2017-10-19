@@ -1,0 +1,37 @@
+---
+# tasks file for ansible-role-installurl
+
+- include_vars: "{{ ansible_os_family }}.yml"
+
+- include: "install-{{ ansible_os_family }}.yml"
+
+- name: Create log directory
+  file:
+    path: "{{ installurl_log_dir }}"
+    mode: 0755
+    owner: "{{ installurl_user }}"
+    group: "{{ installurl_group }}"
+    state: directory
+  notify: Restart installurl
+
+- name: Create db directory
+  file:
+    path: "{{ installurl_db_dir }}"
+    mode: 0755
+    owner: "{{ installurl_user }}"
+    group: "{{ installurl_group }}"
+    state: directory
+  notify: Restart installurl
+
+- name: Create installurl.conf
+  template:
+    src: installurl.conf.j2
+    dest: "{{ installurl_conf_file }}"
+    validate: echo %s
+  notify: Restart installurl
+
+- name: Start installurl
+  service:
+    name: "{{ installurl_service }}"
+    enabled: true
+    state: started

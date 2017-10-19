@@ -1,0 +1,5 @@
+- hosts: localhost
+  roles:
+    - ansible-role-installurl
+  vars:
+    installurl_config: ""
