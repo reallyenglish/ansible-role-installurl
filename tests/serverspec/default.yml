@@ -2,4 +2,4 @@
   roles:
     - ansible-role-installurl
   vars:
-    installurl_config: ""
+    installurl_url: https://fastly.cdn.openbsd.org/pub/OpenBSD

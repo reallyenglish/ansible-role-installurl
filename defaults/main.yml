@@ -1,8 +1,2 @@
-installurl_user: installurl
-installurl_group: installurl
-installurl_log_dir: /var/log/installurl
-installurl_db_dir: "{{ __installurl_db_dir }}"
-installurl_service: installurl
-installurl_conf_dir: "{{ __installurl_conf_dir }}"
-installurl_conf_file: "{{ __installurl_conf_dir }}/installurl.conf"
-installurl_flags: ""
+installurl_path: /etc/installurl
+installurl_url: https://ftp.openbsd.org/pub/OpenBSD

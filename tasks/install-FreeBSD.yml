@@ -1,6 +1,0 @@
----
-
-- name: Install installurl
-  pkgng:
-    name: installurl
-    state: present
